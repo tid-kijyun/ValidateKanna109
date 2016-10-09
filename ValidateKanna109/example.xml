@@ -1,0 +1,35 @@
+<ROOT>
+    <BESTBUY d="1">
+        <MATCHES>
+            <STORE><STORE_NAME>EXAMPLE STORE NAME</STORE_NAME></STORE>
+            <STORE><STORE_NAME>EXAMPLE STORE NAME2</STORE_NAME></STORE>
+            <STORE><STORE_NAME>EXAMPLE STORE NAME3</STORE_NAME></STORE>
+            <STORE><STORE_NAME>EXAMPLE STORE NAME4</STORE_NAME></STORE>
+            <STORE><STORE_NAME>EXAMPLE STORE NAME5</STORE_NAME></STORE>
+            <STORE><STORE_NAME>EXAMPLE STORE NAME6</STORE_NAME></STORE>
+        </MATCHES>
+        <VERIFIED></VERIFIED>
+        <AFFILIATES>
+            <STORE><STORE_NAME>EXAMPLE STORE NAME6</STORE_NAME></STORE>
+        </AFFILIATES>
+        <STORE_TYPE>TYPE</STORE_TYPE>
+        <RETURN_DAYS>30</RETURN_DAYS>
+        <STORE_NAME>NAME</STORE_NAME>
+        <DETAIL>
+            <VISIT>
+                <URL><![CDATA[$main_product_url]]></URL>
+                <VARIABLES>
+                    <main_shipping_cost><![CDATA[n0]]></main_shipping_cost>
+                    <main_image><![CDATA[x(//meta[@property="og:image"]/@content)[1]]]></main_image>
+                    <main_model><![CDATA[x//span[@itemprop="model"]//text()]]></main_model>
+                    <main_price><![CDATA[x//meta[@itemprop="price"]/@content||r\$(\d*\,*\d*\.?\d*)||R$_##,##]]></main_price>
+                    <title><![CDATA[x//div[@id='sku-title']/h1/text()]]></title>
+                    <seller_><![CDATA[x//div[@class='seller-name']/span/a/text()]]></seller_>
+                    <main_seller><![CDATA[x//div[@class='seller-name']/label/text()||c$_##Sold & Shipped||i$_##$seller_##BestBuy]]></main_seller>
+                    <main_in_stock><![CDATA[x//div[@class="cart-button"]/@data-add-to-cart-message||c$_##Add||i$_##1##0]]></main_in_stock>
+                </VARIABLES>
+            </VISIT>
+        </DETAIL>
+    </BESTBUY>
+</ROOT>
+
